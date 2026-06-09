@@ -65,9 +65,5 @@ Add local secret files to `.gitignore`:
 ```
 ---
 
-## 4. تهيئة Git من جذر الريبو
-
-من داخل:
-
 ```bash
 ~/k8s-projects/kubernetes-labs
