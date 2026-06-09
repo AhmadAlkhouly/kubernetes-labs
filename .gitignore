@@ -1,0 +1,17 @@
+# Local secrets
+*.local.yaml
+.env
+*.env
+
+# Kubernetes sensitive files
+*secret.local.yaml
+*secrets.local.yaml
+
+# Temp files
+*.tmp
+*.bak
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
