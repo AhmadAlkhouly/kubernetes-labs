@@ -13,6 +13,8 @@ spec:
       labels:
         app: mariadb
     spec:
+      nodeSelector:
+        workload: storage
       containers:
         - name: mariadb
           image: mariadb:11.4

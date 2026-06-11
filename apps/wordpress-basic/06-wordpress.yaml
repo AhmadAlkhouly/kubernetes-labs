@@ -13,6 +13,8 @@ spec:
       labels:
         app: wordpress
     spec:
+      nodeSelector:
+        workload: web
       containers:
         - name: wordpress
           image: wordpress:6.6-apache
