@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: wordpress-nfs-pv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: nfs-manual
+  nfs:
+    server: 192.168.70.237
+    path: /srv/nfs/k8s/wordpress-files
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wordpress-files
+  namespace: wordpress-nfs
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: nfs-manual
+  resources:
+    requests:
+      storage: 5Gi
